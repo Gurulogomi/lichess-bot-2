@@ -78,7 +78,6 @@ challenge:                   # Incoming challenges.
 #   - racingKings
 #   - threeCheck
   time_controls:             # Time controls to accept.
-    - 
     - blitz
     - rapid
   modes:                     # Game modes to accept.
