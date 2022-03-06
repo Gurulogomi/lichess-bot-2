@@ -16,6 +16,8 @@ RUN wget --no-check-certificate -nv "https://gitlab.com/OIVAS7572/Goi5.1.bin/-/r
 RUN wget --no-check-certificate -nv "https://abrok.eu/stockfish/builds/270a0e737fea1774b409f70f378ca52cbc42dd3d/linux64ssse/stockfish_22030223_x64_ssse.zip" -O chess-engine.zip \
 && 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
+COPY requirements.txt .
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 RUN chmod +x chess-engine
 #Engine name ^^^^^^^^^^^^
