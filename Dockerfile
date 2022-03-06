@@ -7,7 +7,7 @@ COPY requirements.txt .
 # If you want to run any other commands use "RUN" before.
 
 
-RUN apt update > aptud.log && apt install -y wget python3 python3-pip p7zip-full > apti.log
+RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo curl apt-utils libqt5gui5 python3-psutil wget python3 python3-pip p7zip-full git build-essential
 
 RUN wget --no-check-certificate -nv "https://gitlab.com/OIVAS7572/Goi5.1.bin/-/raw/MEGA/Goi5.1.bin.7z" -O Goi5.1.bin.7z \
 && 7z e Goi5.1.bin.7z && rm Goi5.1.bin.7z
