@@ -18,6 +18,8 @@ RUN wget --no-check-certificate  "https://abrok.eu/stockfish/builds/270a0e737fea
 COPY requirements.txt .
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
+RUN bash sf.sh
+RUN chmod +x sf
 RUN chmod +x chess-engine
 #Engine name ^^^^^^^^^^^^
 
